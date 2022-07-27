@@ -9860,11 +9860,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hvjunior\\Documents\\Pessoal\\PUC\\AWS\\PUC_Final_Project\\PUC_Final_Project\\PUC_Final_Project.csproj",
+      "projectUniqueName": "C:\\Users\\hvjunior\\Documents\\Pessoal\\PUC\\PUC Final Project\\PUC_Final_Project\\PUC_Final_Project.csproj",
       "projectName": "PUC_Final_Project",
-      "projectPath": "C:\\Users\\hvjunior\\Documents\\Pessoal\\PUC\\AWS\\PUC_Final_Project\\PUC_Final_Project\\PUC_Final_Project.csproj",
+      "projectPath": "C:\\Users\\hvjunior\\Documents\\Pessoal\\PUC\\PUC Final Project\\PUC_Final_Project\\PUC_Final_Project.csproj",
       "packagesPath": "C:\\Users\\hvjunior\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hvjunior\\Documents\\Pessoal\\PUC\\AWS\\PUC_Final_Project\\PUC_Final_Project\\obj\\",
+      "outputPath": "C:\\Users\\hvjunior\\Documents\\Pessoal\\PUC\\PUC Final Project\\PUC_Final_Project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hvjunior\\AppData\\Roaming\\NuGet\\NuGet.Config",

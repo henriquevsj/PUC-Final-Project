@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gi4u9d/KZXMIOT46JC9nnTkATNDwiSf6Qmznp9CJ0I8F4QvOp9FcOgs/9EzBpN6Ivlr9R8tVvywJxQGpBkvTOg==",
+  "dgSpecHash": "gW1W2pRQ8xnOgXZrvPGUGunsPSqJJBq6Kao3Fg7NfXSFFDCopqDRAEhddc5v0XYEtI6E1GAgRbnVDP2Zm9Cf5g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hvjunior\\Documents\\Pessoal\\PUC\\AWS\\PUC_Final_Project\\PUC_Final_Project\\PUC_Final_Project.csproj",
+  "projectFilePath": "C:\\Users\\hvjunior\\Documents\\Pessoal\\PUC\\PUC Final Project\\PUC_Final_Project\\PUC_Final_Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hvjunior\\.nuget\\packages\\confluent.kafka\\1.1.0\\confluent.kafka.1.1.0.nupkg.sha512",
     "C:\\Users\\hvjunior\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
