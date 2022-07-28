@@ -18,16 +18,14 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         .AddJwtBearer(options =>
         {
-            options.Authority = "http://localhost:7245";
+            options.Authority = "http://localhost:5245/";
             options.RequireHttpsMetadata = false;
             options.SaveToken = true;
             options.TokenValidationParameters = new TokenValidationParameters
             {
                 ValidateIssuerSigningKey = true,
                 ValidateLifetime = true,
-                ValidateIssuer = true,
-                ValidIssuer = "Also My Issuer",    //Missing line here
-                ValidAudience = builder.Configuration["Jwt:Audience"],
+                ValidAudience = "0oa173fmolqChJbj00h8",
                 ValidateAudience = true,
                 IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("abcdefghijklmnopqrstuvwxyz123456"))
             };
