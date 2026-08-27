@@ -35,7 +35,7 @@ steps:
 
 - bash: |
     RESPONSE=$(curl -s -X POST "https://security-gate.sec.turing.seg.br/scan" \
-      -H "X-Security-Gate-Token: $(SECURITY_GATE_TOKEN)" \
+      -H "X-Security-Gate-Token: tsg_YYfm77W8VmUOaKL5HVBLOWMYtnZIiJeOkmwbveP6" \
       -H "Content-Type: application/json" \
       -d "{
         \"repo_url\": \"$(Build.Repository.Uri)\",
