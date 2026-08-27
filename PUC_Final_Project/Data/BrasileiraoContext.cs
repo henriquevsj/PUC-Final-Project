@@ -9,7 +9,7 @@ namespace PUC_Final_Project.Data
             : base(options)
         {
         }
-
+        
         public DbSet<Time> Time { get; set; }
         public DbSet<Jogador> Jogador { get; set; }
         public DbSet<Transferencia> Transferencia { get; set; }
@@ -20,7 +20,10 @@ namespace PUC_Final_Project.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Password=dcrrwmp3;Persist Security Info=True;User ID=sa;Initial Catalog=Brasileirao;Data Source=HUNB1044\SQLSERVER");
+            //optionsBuilder.UseSqlServer(@"Password=dcrrwmp3;Persist Security Info=True;User ID=sa;Initial Catalog=Brasileirao;Data Source=HUNB1044\SQLSERVER");
+
         }
+        
 
     }
 }
