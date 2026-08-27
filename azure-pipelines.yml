@@ -32,3 +32,32 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- bash: |
+    RESPONSE=$(curl -s -X POST "https://security-gate.sec.turing.seg.br/scan" \
+      -H "X-Security-Gate-Token: $(SECURITY_GATE_TOKEN)" \
+      -H "Content-Type: application/json" \
+      -d "{
+        \"repo_url\": \"$(Build.Repository.Uri)\",
+        \"branch\": \"$(Build.SourceBranchName)\",
+        \"trigger\": \"$(Build.Reason)\"
+      }")
+
+    STATUS=$(echo "$RESPONSE" | jq -r '.status // "fail"')
+    echo "$RESPONSE" | jq -r '.sarif // "{}"' > turing-results.sarif
+
+    echo "### Vulnerabilidades Encontradas ###"
+    echo "$RESPONSE" | jq -r '.findings[] | "- [" + .severity + "] " + .title + " (" + .file + ":" + (.line|tostring) + ")"' \
+      || echo "Nenhuma vulnerabilidade listada."
+
+    if [ "$STATUS" = "fail" ]; then
+      echo "##vso[task.logissue type=error]BLOQUEADO: Vulnerabilidades críticas encontradas!"
+      exit 1
+    fi
+  displayName: 'Turing Security Gate'
+  env:
+    SECURITY_GATE_TOKEN: $(SECURITY_GATE_TOKEN)
+
+- publish: turing-results.sarif
+  artifact: turing-results
+  condition: always()
